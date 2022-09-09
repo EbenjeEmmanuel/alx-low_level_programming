@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- *  * main - Entry point for me
- *   * Return: Always 0 (success/correct)
- *    */
+ * main - Entry point for me
+ * Return: Always 0 (success/correct)
+ */
 int main(void)
 {
-		int i;
+	int i;
 
-			for (i = 0 ; i < 10; i++)
-					{
-							printf("%i", i);
-								}
-				printf("\n");
-					return (0);
+	for (i = 0 ; i < 10; i++)
+	{
+	printf("%i", i);
+	}
+	printf("\n");
+	return (0);
 }
