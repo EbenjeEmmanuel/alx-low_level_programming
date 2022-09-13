@@ -1,22 +1,21 @@
 #include "main.h"
-
 /**
- * * main - prints Putchar
- * *
- * *Description: prints _putchar
- * *
- * *Return: 0 (Success)
- * */
-int main(void)
+ * print_alphabet_x10 - prints alphabet 10 times
+ *
+ * Return: always 0;
+ *
+ */
+void print_alphabet_x10(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-	return (0);
+	char i;
+	char h;
+
+	for (h = 0; h <= 9; h++)
+	{
+		for (i = 'a'; i <= 'z'; i++)
+		{
+			_putchar(i);
+		}
+		_putchar('\n');
+	}
 }
