@@ -1,21 +1,52 @@
-#include "main.h"
-#include "6-abs.c"
-#include <stdio.h>
-
+nclude "main.h"
 /**
- * print_to_98 - prints all natural numbers from n to 98
- * @n: input number to check
- * Return: nothing
- */
-void print_to_98(int n)
+ *  * print_times_table - times table function
+ *   * @n: integer to return
+ *    *
+ *     */
+void print_times_table(int n)
 {
-	int i;
-
-	if (n > 98)
-	{
-		for (i = n; i >= 98; i--)
-		{
-			printf("%d", i);
+		int i;
+			int j;
+			
+				if (n <= 15 && n >= 0)
+						{
+									for (i = 0; i <= n; i++)
+												{
+																for (j = 0; j <= n; j++)
+																				{
+																									int prod = j * i;
+																									
+																													if (j == 0)
+																																		{
+																																								_putchar('0');
+																																												} else if (prod <= 9)
+																																																	{
+																																																							_putchar(',');
+																																																												_putchar(' ');
+																																																																	_putchar(' ');
+																																																																						_putchar(' ');
+																																																																											_putchar('0' + prod);
+																																																																															} else if (prod > 99)
+																																																																																				{
+																																																																																										_putchar(',');
+																																																																																															_putchar(' ');
+																																																																																																				_putchar('0' + (prod / 100));
+																																																																																																									_putchar('0' + ((prod / 10) % 10));
+																																																																																																														_putchar('0' + (prod % 10));
+																																																																																																																		} else
+																																																																																																																							{
+																																																																																																																													_putchar(',');
+																																																																																																																																		_putchar(' ');
+																																																																																																																																							_putchar(' ');
+																																																																																																																																												_putchar('0' + (prod / 10));
+																																																																																																																																																	_putchar('0' + (prod % 10));
+																																																																																																																																																					}
+																																																																																																																					}
+																			_putchar('\n');
+																					}
+										}
+}8, i);
 			if (i != 98)
 			{
 				printf(", ");
@@ -32,4 +63,4 @@ void print_to_98(int n)
 			}
 		}
 	}
-	printf("\n");
+	printf("\n");;
