@@ -1,106 +1,35 @@
-<<<<<<< HEAD
-nclude "main.h"
-/**
- *  * print_times_table - times table function
- *   * @n: integer to return
- *    *
- *     */
-void print_times_table(int n)
-{
-		int i;
-			int j;
-			
-				if (n <= 15 && n >= 0)
-						{
-									for (i = 0; i <= n; i++)
-												{
-																for (j = 0; j <= n; j++)
-																				{
-																									int prod = j * i;
-																									
-																													if (j == 0)
-																																		{
-																																								_putchar('0');
-																																												} else if (prod <= 9)
-																																																	{
-																																																							_putchar(',');
-																																																												_putchar(' ');
-																																																																	_putchar(' ');
-																																																																						_putchar(' ');
-																																																																											_putchar('0' + prod);
-																																																																															} else if (prod > 99)
-																																																																																				{
-																																																																																										_putchar(',');
-																																																																																															_putchar(' ');
-																																																																																																				_putchar('0' + (prod / 100));
-																																																																																																									_putchar('0' + ((prod / 10) % 10));
-																																																																																																														_putchar('0' + (prod % 10));
-																																																																																																																		} else
-																																																																																																																							{
-																																																																																																																													_putchar(',');
-																																																																																																																																		_putchar(' ');
-																																																																																																																																							_putchar(' ');
-																																																																																																																																												_putchar('0' + (prod / 10));
-																																																																																																																																																	_putchar('0' + (prod % 10));
-																																																																																																																																																					}
-																																																																																																																					}
-																			_putchar('\n');
-																					}
-										}
-}8, i);
-			if (i != 98)
-=======
 #include "main.h"
+#include "6-abs.c"
+#include <stdio.h>
+
 /**
- * print_times_table - times table function
- * @n: integer to return
- *
+ * print_to_98 - prints all natural numbers from n to 98
+ * @n: input number to check
+ * Return: nothing
  */
-void print_times_table(int n)
+void print_to_98(int n)
 {
 	int i;
-	int j;
 
-	if (n <= 15 && n >= 0)
+	if (n > 98)
 	{
-		for (i = 0; i <= n; i++)
+		for (i = n; i >= 98; i--)
 		{
-			for (j = 0; j <= n; j++)
->>>>>>> bf397a99bfd268c5905fa0aa0a4ce1adf2101ecf
+			printf("%d", i);
+			if (i != 98)
 			{
-				int prod = j * i;
-
-				if (j == 0)
-				{
-					_putchar('0');
-				} else if (prod <= 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + prod);
-				} else if (prod > 99)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar('0' + (prod / 100));
-					_putchar('0' + ((prod / 10) % 10));
-					_putchar('0' + (prod % 10));
-				} else
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + (prod / 10));
-					_putchar('0' + (prod % 10));
-				}
+				printf(", ");
 			}
-			_putchar('\n');
+		}
+	} else
+	{
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
-<<<<<<< HEAD
-	printf("\n");;
-=======
-}
->>>>>>> bf397a99bfd268c5905fa0aa0a4ce1adf2101ecf
+	printf("\n");
